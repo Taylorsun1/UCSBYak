@@ -1,63 +1,45 @@
 class PicsController < ApplicationController
   before_action :set_pic, only: [:show, :edit, :update, :destroy]
 
-  # GET /pics
-  # GET /pics.json
+  
   def index
     @pics = Pic.all
   end
 
-  # GET /pics/1
-  # GET /pics/1.json
   def show
   end
 
-  # GET /pics/new
+ 
   def new
     @pic = Pic.new
   end
 
-  # GET /pics/1/edit
+
   def edit
   end
 
-  # POST /pics
-  # POST /pics.json
+ 
   def create
     @pic = Pic.new(pic_params)
-
-    respond_to do |format|
       if @pic.save
-        format.html { redirect_to @pic, notice: 'Pic was successfully created.' }
-        format.json { render :show, status: :created, location: @pic }
+        redirect_to @pic, notice: 'Pic was successfully created.'
       else
-        format.html { render :new }
-        format.json { render json: @pic.errors, status: :unprocessable_entity }
+        render action: 'new'
       end
     end
   end
 
-  # PATCH/PUT /pics/1
-  # PATCH/PUT /pics/1.json
   def update
-    respond_to do |format|
       if @pic.update(pic_params)
-        format.html { redirect_to @pic, notice: 'Pic was successfully updated.' }
-        format.json { render :show, status: :ok, location: @pic }
+        redirect_to @pic, notice: 'Pic was successfully updated.'
       else
-        format.html { render :edit }
-        format.json { render json: @pic.errors, status: :unprocessable_entity }
+        render action: 'edit'
       end
-    end
-  end
 
-  # DELETE /pics/1
-  # DELETE /pics/1.json
+ 
   def destroy
     @pic.destroy
-    respond_to do |format|
-      format.html { redirect_to pics_url, notice: 'Pic was successfully destroyed.' }
-      format.json { head :no_content }
+    redirect_to pics_url
     end
   end
 
@@ -71,4 +53,3 @@ class PicsController < ApplicationController
     def pic_params
       params[:pic]
     end
-end
