@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
+  resources :posts
   resources :pics
   devise_for :users
   root "pics#index"
   get "about" => "pages#about"
+  get "posts" => "pages#posts"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

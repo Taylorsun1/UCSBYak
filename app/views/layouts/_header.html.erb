@@ -10,6 +10,7 @@
       </button>
       <a class="navbar-brand" href="">
       <%= link_to 'UCSB Photos and Blog', root_path %>
+
       </a>
     </div>
 
@@ -19,6 +20,8 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <% if user_signed_in? %> 
+        <li><%= link_to 'Posts', posts_path %></li>
+        <li><%= link_to 'New Post', new_post_path %></li>
         <li><%= link_to 'New Pic', new_pic_path %></li>
         <li><%= link_to "Account Settings", edit_user_registration_path %></li>
         <li><%= link_to "Log out", destroy_user_session_path, method: :delete %> </li>
