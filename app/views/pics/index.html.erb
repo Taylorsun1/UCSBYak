@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+
 
 <h1>Listing Pics</h1>
 
@@ -12,6 +12,7 @@
   <tbody>
     <% @pics.each do |pic| %>
       <tr>
+        <td><%= image_tag pic.image.url(:medium) %></td>
         <td><%= link_to 'Show', pic %></td>
         <% if pic.user == current_user %>
         <td><%= link_to 'Edit', edit_pic_path(pic) %></td>

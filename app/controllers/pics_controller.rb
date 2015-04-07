@@ -1,5 +1,5 @@
 class PicsController < ApplicationController
-  before_action :authenticate_user!, except: [:index, :show]
+  before_action :authenticate_user!, except: [:index, :show, :destroy]
   before_action :set_pic, only: [:show, :edit, :update, :destroy]
   before_action :correct_user, only: [:edit, :update, :destroy]
   
@@ -58,5 +58,5 @@ class PicsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def pic_params
-      params[:pic]
+      params.require(:pic).permit(:description, :image)
     end
