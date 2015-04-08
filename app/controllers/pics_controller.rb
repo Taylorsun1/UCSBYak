@@ -3,10 +3,17 @@ class PicsController < ApplicationController
   before_action :set_pic, only: [:show, :edit, :update, :destroy]
   before_action :correct_user, only: [:edit, :update, :destroy]
   
-  
+
+ 
+
+
+
   def index
     @pics = Pic.all
   end
+
+
+
 
   def show
   end

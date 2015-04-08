@@ -1,0 +1,20 @@
+#wrapper {
+    
+   
+    overflow: hidden; /* add this to contain floated children */
+}
+#first {
+
+    float:left; /* add this */
+  
+}
+#second {
+  
+    float: left; /* add this */
+}
+
+#third {
+
+	float: left;
+
+}

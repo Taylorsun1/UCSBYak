@@ -10,6 +10,12 @@ class PagesController < ApplicationController
 
   def build
   end
+
+  def homes
+  end
+  
+
+
 end
 
 

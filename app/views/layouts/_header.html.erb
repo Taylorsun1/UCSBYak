@@ -9,9 +9,7 @@
         <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand" href="">
-      <%= link_to 'UCSB Photos and Blog', root_path %>
-
-
+      <%= link_to 'ivlens Production', root_path %>
       </a>
     </div>
     
@@ -28,7 +26,6 @@
         <li><%= link_to "Account Settings", edit_user_registration_path %></li>
         <li><%= link_to "Log out", destroy_user_session_path, method: :delete %> </li>
         <% else %>
-          <li><%= link_to "build", build_path %>
           <li><%= link_to "About", about_path %>
           <li><%= link_to "Sign in", new_user_session_path %><li>
         <% end %>
