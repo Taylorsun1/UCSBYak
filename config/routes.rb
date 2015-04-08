@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   root "pics#index"
   get "about" => "pages#about"
   get "posts" => "pages#posts"
+  get "build" => "pages#build"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

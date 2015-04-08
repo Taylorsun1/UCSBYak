@@ -7,4 +7,9 @@ class PagesController < ApplicationController
 
   def posts
   end
+
+  def build
+  end
 end
+
+
