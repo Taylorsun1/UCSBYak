@@ -9,7 +9,7 @@
         <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand" href="">
-      <%= link_to 'IVLens Production', root_path %>
+      <%= link_to 'IVLens Home', root_path %>
       </a>
     </div>
     
@@ -26,6 +26,7 @@
         <li><%= link_to "Account Settings", edit_user_registration_path %></li>
         <li><%= link_to "Log out", destroy_user_session_path, method: :delete %> </li>
         <% else %>
+          <li><%= link_to "TSun Labs © 2015" %>
           <li><%= link_to "facebook IVLens", "https://www.facebook.com/pages/IVlens/447343398774475" %>
           <li><%= link_to "Sign Up", new_user_registration_path %>
           <li><%= link_to "About", about_path %>
